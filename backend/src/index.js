@@ -42,7 +42,7 @@ app.post('/add', async(req,res )=>{
         const newtask=await todo.create({task})
        res.status(200).json(newtask)
     } catch (error) {
-        console.error('error in adding task',error.message)
+        console.error('error in adding the task',error.message)
         res.status(401).json({ error: 'Failed to add task', details: err.message })
     }
    
